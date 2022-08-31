@@ -9,6 +9,8 @@ require('./bootstrap');
 import Vue from 'vue';
 import vue from 'vue'
 import VueRouter from 'vue-router'
+//Routes imported
+import {routes} from './routes';
 
 Vue.use(VueRouter)
 
