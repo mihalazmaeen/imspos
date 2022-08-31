@@ -14,12 +14,11 @@ import {routes} from './routes';
 
 Vue.use(VueRouter)
 
-const router = VueRouter.createRouter({
-    // 4. Provide the history implementation to use. We are using the hash history for simplicity here.
-    history: VueRouter.createWebHashHistory(),
-    routes, // short for `routes: routes`
+const router = new VueRouter({
+    routes, 
+    mode:'history'
   })
-
+  
 
 
 /**
@@ -30,4 +29,5 @@ const router = VueRouter.createRouter({
 
 const app = new Vue({
     el: '#app',
+    router
 });
