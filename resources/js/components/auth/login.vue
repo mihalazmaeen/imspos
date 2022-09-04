@@ -14,9 +14,11 @@
                     <div class="form-group">
                       <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp"
                         placeholder="Enter Email Address" v-model="form.email">
+                        <small class="text-danger " v-if="errors.email">{{errors.email[0]}}</small>
                     </div>
                     <div class="form-group">
                       <input type="password" class="form-control" id="exampleInputPassword" placeholder="Password" v-model="form.password">
+                      <small class="text-danger " v-if="errors.password">{{errors.password[0]}}</small>
                     </div>
                     <div class="form-group">
                       <div class="custom-control custom-checkbox small" style="line-height: 1.5rem;">
@@ -63,7 +65,10 @@
     form:{
       email:null,
       password:null
-    }
+    },
+    errors:{}
+  
+
   }
  
 },
@@ -78,7 +83,7 @@ methods:{
         })
         this.$router.push({name:'home'})
       })
-      .catch(error=>this.error=error.response.data)
+      .catch(error=>this.errors=error.response.data.errors)
       .catch(
         Toast.fire({
         icon: 'warning',
