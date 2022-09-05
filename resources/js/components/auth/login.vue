@@ -35,7 +35,7 @@
                   </form>
                   <hr>  
                   <div class="text-center">
-                    <router-link to="/registration" class="font-weight-bold small">Create an Account!</router-link>
+                    <router-link to="/signup" class="font-weight-bold small">Create an Account!</router-link>
                   </div>
                   <div class="text-center">
                     <router-link to="/resetPassword" class="font-weight-bold small">Forget Password ?</router-link>

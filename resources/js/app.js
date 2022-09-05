@@ -16,6 +16,10 @@ import {routes} from './routes';
 import Swal from 'sweetalert2';
 window.Swal=Swal;
 
+//Noty notification
+import Notification from './Helpers/Notification';
+window.User=User
+
 const Toast = Swal.mixin({
   toast: true,
   position: 'top-end',
